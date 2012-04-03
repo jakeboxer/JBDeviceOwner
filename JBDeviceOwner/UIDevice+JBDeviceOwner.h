@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Jake Boxer. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+
 @interface UIDevice (JBDeviceOwner)
 
 @end

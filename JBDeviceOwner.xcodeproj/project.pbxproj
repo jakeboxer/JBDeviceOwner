@@ -11,6 +11,7 @@
 		230BAD8D152BBBE400CE26EC /* JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD8C152BBBE400CE26EC /* JBDeviceOwner.m */; };
 		230BAD95152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */; };
 		230BAD96152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */; };
+		230BAD98152BBDB300CE26EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAD97152BBDB300CE26EC /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		230BAD8C152BBBE400CE26EC /* JBDeviceOwner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBDeviceOwner.m; sourceTree = "<group>"; };
 		230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JBDeviceOwner.h"; sourceTree = "<group>"; };
 		230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JBDeviceOwner.m"; sourceTree = "<group>"; };
+		230BAD97152BBDB300CE26EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230BAD98152BBDB300CE26EC /* UIKit.framework in Frameworks */,
 				230BAD87152BBBE400CE26EC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +41,7 @@
 		230BAD78152BBBE400CE26EC = {
 			isa = PBXGroup;
 			children = (
+				230BAD97152BBDB300CE26EC /* UIKit.framework */,
 				230BAD88152BBBE400CE26EC /* JBDeviceOwner */,
 				230BAD85152BBBE400CE26EC /* Frameworks */,
 				230BAD84152BBBE400CE26EC /* Products */,
