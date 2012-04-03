@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		230BAD87152BBBE400CE26EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAD86152BBBE400CE26EC /* Foundation.framework */; };
 		230BAD8D152BBBE400CE26EC /* JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD8C152BBBE400CE26EC /* JBDeviceOwner.m */; };
+		230BAD95152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */; };
+		230BAD96152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +19,8 @@
 		230BAD8A152BBBE400CE26EC /* JBDeviceOwner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JBDeviceOwner-Prefix.pch"; sourceTree = "<group>"; };
 		230BAD8B152BBBE400CE26EC /* JBDeviceOwner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JBDeviceOwner.h; sourceTree = "<group>"; };
 		230BAD8C152BBBE400CE26EC /* JBDeviceOwner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JBDeviceOwner.m; sourceTree = "<group>"; };
+		230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JBDeviceOwner.h"; sourceTree = "<group>"; };
+		230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JBDeviceOwner.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				230BAD8B152BBBE400CE26EC /* JBDeviceOwner.h */,
 				230BAD8C152BBBE400CE26EC /* JBDeviceOwner.m */,
 				230BAD89152BBBE400CE26EC /* Supporting Files */,
+				230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */,
+				230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */,
 			);
 			path = JBDeviceOwner;
 			sourceTree = "<group>";
@@ -81,6 +87,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230BAD95152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +118,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = GitHub;
+				ORGANIZATIONNAME = "Jake Boxer";
 			};
 			buildConfigurationList = 230BAD7D152BBBE400CE26EC /* Build configuration list for PBXProject "JBDeviceOwner" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				230BAD8D152BBBE400CE26EC /* JBDeviceOwner.m in Sources */,
+				230BAD96152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
