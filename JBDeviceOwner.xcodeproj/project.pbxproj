@@ -42,7 +42,6 @@
 		230BAD78152BBBE400CE26EC = {
 			isa = PBXGroup;
 			children = (
-				230BAD97152BBDB300CE26EC /* UIKit.framework */,
 				230BAD88152BBBE400CE26EC /* JBDeviceOwner */,
 				230BAD85152BBBE400CE26EC /* Frameworks */,
 				230BAD84152BBBE400CE26EC /* Products */,
@@ -60,6 +59,7 @@
 		230BAD85152BBBE400CE26EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				230BAD97152BBDB300CE26EC /* UIKit.framework */,
 				230BAD86152BBBE400CE26EC /* Foundation.framework */,
 			);
 			name = Frameworks;
