@@ -133,7 +133,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0430;
-				ORGANIZATIONNAME = GitHub;
+				ORGANIZATIONNAME = "Jake Boxer";
 			};
 			buildConfigurationList = 230BAE31152BE54700CE26EC /* Build configuration list for PBXProject "JBDeviceOwnerExample" */;
 			compatibilityVersion = "Xcode 3.2";
