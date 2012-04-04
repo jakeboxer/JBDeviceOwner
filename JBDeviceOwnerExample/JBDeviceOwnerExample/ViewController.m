@@ -7,15 +7,26 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import <JBDeviceOwner/JBDeviceOwner.h>
 
 @implementation ViewController
 
+@synthesize firstNameTextField;
+@synthesize lastNameTextField;
+@synthesize emailTextField;
+@synthesize phoneTextField;
+
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  JBDeviceOwner *owner = [UIDevice currentDevice].owner;
+
+  if (nil != owner) {
+    self.firstNameTextField.text = owner.firstName;
+    self.lastNameTextField.text = owner.lastName;
+    self.emailTextField.text = owner.email;
+    self.phoneTextField.text = owner.phone;
+  }
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
