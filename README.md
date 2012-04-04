@@ -38,7 +38,7 @@ If `JBDeviceOwner` can't figure out the owner's name, or if it can't find a matc
 
 ## How to install
 
-1. Download a ZIP/TAR of the framework from the Downloads tab. Unzip/untar it.
+1. Download [the latest framework ZIP](https://github.com/downloads/jakeboxer/JBDeviceOwner/JBDeviceOwner.framework.zip) from [the Downloads tab](https://github.com/jakeboxer/JBDeviceOwner/downloads). Unzip/untar it.
 1. Drag `JBDeviceOwner.framework` into your project.
 1. Add `AddressBook.framework` to your project if it's not there already (it's an Apple framework).
 1. Add `-ObjC -all_load` to your target's "Other Linker Flags".
