@@ -7,6 +7,7 @@
 //
 
 #import "JBDeviceOwner.h"
+#import <AddressBook/AddressBook.h>
 
 @interface JBDeviceOwner ()
 
@@ -15,6 +16,8 @@
 @property (strong, nonatomic, readwrite) NSString *fullName;
 @property (strong, nonatomic, readwrite) NSString *lastName;
 @property (strong, nonatomic, readwrite) NSString *middleName;
+
+- (void)populateFromAddressBook;
 
 @end
 
@@ -50,10 +53,22 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
           self.middleName = [[nameTokens subarrayWithRange:NSMakeRange(1, [nameTokens count] - 2)] componentsJoinedByString:@" "];
         }
       }
+
+      [self populateFromAddressBook];
     }
   }
 
   return self;
+}
+
+#pragma mark - Private methods
+
+- (void)populateFromAddressBook {
+  ABAddressBookRef addressBook = ABAddressBookCreate();
+
+
+
+  CFRelease(addressBook);
 }
 
 @end
