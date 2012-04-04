@@ -51,4 +51,6 @@ If `JBDeviceOwner` can't figure out the owner's name, or if it can't find a matc
 
 ## Thanks
 
-This library was inspired by [Square](https://squareup.com/)'s iOS app, and by [John Feminella's awesome Quora explanation](http://www.quora.com/Square-company/How-does-Square-know-my-name-in-their-apps-registration-process) of Square's magic.
+This library was inspired by [Square](https://squareup.com/)'s iOS app, and by [John Feminella's awesome Quora explanation](http://www.quora.com/Square-company/How-does-Square-know-my-name-in-their-apps-registration-process) of Square's magic. Fantastic idea, super clear breakdown.
+
+Big thanks to [Jeff Verkoeyen](http://twitter.com/featherless) for his [iOS-Framework](https://github.com/jverkoey/iOS-Framework) guide. For some reason, creating static iOS frameworks is a giant hassle. Jeff made it super easy. Also, this might be the only Xcode tutorial I've ever followed where everything worked as expected.
