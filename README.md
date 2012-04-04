@@ -51,4 +51,4 @@ If `JBDeviceOwner` can't figure out the owner's name, or if it can't find a matc
 
 ## Thanks
 
-This library was inspired by [Square](https://squareup.com/)'s iOS app, and by [John Feminella's Quora awesome explanation](http://www.quora.com/Square-company/How-does-Square-know-my-name-in-their-apps-registration-process) of Square's magic.
+This library was inspired by [Square](https://squareup.com/)'s iOS app, and by [John Feminella's awesome Quora explanation](http://www.quora.com/Square-company/How-does-Square-know-my-name-in-their-apps-registration-process) of Square's magic.
