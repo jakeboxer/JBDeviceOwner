@@ -7,7 +7,13 @@
 //
 
 #import "UIDevice+JBDeviceOwner.h"
+#import "JBDeviceOwner.h"
 
 @implementation UIDevice (JBDeviceOwner)
+
+- (JBDeviceOwner *)owner {
+  JBDeviceOwner *potentialOwner = [[JBDeviceOwner alloc] initWithDevice:self];
+  return potentialOwner.hasAddressBookMatch ? potentialOwner : nil;
+}
 
 @end

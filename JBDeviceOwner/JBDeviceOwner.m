@@ -15,6 +15,7 @@
 @property (strong, nonatomic, readwrite) NSString *email;
 @property (strong, nonatomic, readwrite) NSString *firstName;
 @property (strong, nonatomic, readwrite) NSString *fullName;
+@property (weak, nonatomic, readwrite) BOOL hasAddressBookMatch;
 @property (strong, nonatomic, readwrite) NSString *lastName;
 @property (strong, nonatomic, readwrite) NSString *middleName;
 @property (strong, nonatomic, readwrite) NSString *phone;
@@ -31,6 +32,7 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
 @synthesize email;
 @synthesize firstName;
 @synthesize fullName;
+@synthesize hasAddressBookMatch;
 @synthesize lastName;
 @synthesize middleName;
 @synthesize phone;
@@ -68,8 +70,9 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
 - (void)populateFromAddressBook {
   ABAddressBookRef addressBook = ABAddressBookCreate();
   NSArray *people = (__bridge NSArray *)ABAddressBookCopyPeopleWithName(addressBook, (__bridge CFStringRef)self.fullName);
+  self.hasAddressBookMatch = ([people count] > 0);
 
-  if ([people count] > 0) {
+  if (self.hasAddressBookMatch) {
     ABRecordRef owner = (__bridge ABRecordRef)[people objectAtIndex:0];
 
     // Email

@@ -16,6 +16,7 @@
 @property (strong, nonatomic, readonly) NSString *email;
 @property (strong, nonatomic, readonly) NSString *firstName;
 @property (strong, nonatomic, readonly) NSString *fullName;
+@property (assign, nonatomic, readonly) BOOL hasAddressBookMatch;
 @property (strong, nonatomic, readonly) NSString *lastName;
 @property (strong, nonatomic, readonly) NSString *middleName;
 @property (strong, nonatomic, readonly) NSString *phone;

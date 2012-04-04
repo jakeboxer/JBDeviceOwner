@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class JBDeviceOwner;
+
 @interface UIDevice (JBDeviceOwner)
+
+@property (weak, nonatomic, readonly) JBDeviceOwner *owner;
 
 @end
