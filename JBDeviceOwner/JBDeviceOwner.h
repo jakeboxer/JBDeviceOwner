@@ -11,10 +11,13 @@
 
 @interface JBDeviceOwner : NSObject
 
-- (id)initWithDevice:(UIDevice *)device;
+- (id)initWithDevice:(UIDevice *)aDevice;
 
+@property (strong, nonatomic, readonly) NSString *email;
 @property (strong, nonatomic, readonly) NSString *firstName;
+@property (strong, nonatomic, readonly) NSString *fullName;
 @property (strong, nonatomic, readonly) NSString *lastName;
 @property (strong, nonatomic, readonly) NSString *middleName;
+@property (strong, nonatomic, readonly) NSString *phone;
 
 @end

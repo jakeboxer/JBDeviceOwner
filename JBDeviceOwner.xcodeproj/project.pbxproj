@@ -28,6 +28,7 @@
 		230BAD96152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */; };
 		230BAD98152BBDB300CE26EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAD97152BBDB300CE26EC /* UIKit.framework */; };
 		230BAD99152BBE3200CE26EC /* JBDeviceOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 230BAD8B152BBBE400CE26EC /* JBDeviceOwner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		230BADE5152BD00D00CE26EC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BADE4152BD00D00CE26EC /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+JBDeviceOwner.h"; sourceTree = "<group>"; };
 		230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+JBDeviceOwner.m"; sourceTree = "<group>"; };
 		230BAD97152BBDB300CE26EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		230BADE4152BD00D00CE26EC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230BADE5152BD00D00CE26EC /* AddressBook.framework in Frameworks */,
 				230BAD98152BBDB300CE26EC /* UIKit.framework in Frameworks */,
 				230BAD87152BBBE400CE26EC /* Foundation.framework in Frameworks */,
 			);
@@ -84,6 +87,7 @@
 		230BAD85152BBBE400CE26EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				230BADE4152BD00D00CE26EC /* AddressBook.framework */,
 				230BAD97152BBDB300CE26EC /* UIKit.framework */,
 				230BAD86152BBBE400CE26EC /* Foundation.framework */,
 			);
@@ -339,6 +343,7 @@
 				230BADA2152BC01E00CE26EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

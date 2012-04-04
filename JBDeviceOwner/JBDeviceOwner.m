@@ -7,13 +7,19 @@
 //
 
 #import "JBDeviceOwner.h"
+#import <AddressBook/AddressBook.h>
 
 @interface JBDeviceOwner ()
 
 @property (weak, nonatomic) UIDevice *device;
+@property (strong, nonatomic, readwrite) NSString *email;
 @property (strong, nonatomic, readwrite) NSString *firstName;
+@property (strong, nonatomic, readwrite) NSString *fullName;
 @property (strong, nonatomic, readwrite) NSString *lastName;
 @property (strong, nonatomic, readwrite) NSString *middleName;
+@property (strong, nonatomic, readwrite) NSString *phone;
+
+- (void)populateFromAddressBook;
 
 @end
 
@@ -22,22 +28,25 @@
 static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
 @synthesize device;
+@synthesize email;
 @synthesize firstName;
+@synthesize fullName;
 @synthesize lastName;
 @synthesize middleName;
+@synthesize phone;
 
 #pragma mark - Creation/Removal Methods
 
-- (id)initWithDevice:(UIDevice *)device {
+- (id)initWithDevice:(UIDevice *)aDevice {
   self = [super init];
 
   if (nil != self) {
-    self.device = device;
+    self.device = aDevice;
     NSString *deviceName = self.device.name;
 
     if ([deviceName hasSuffix:kDeviceNameSuffix]) {
-      NSString *name = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
-      NSArray *nameTokens = [name componentsSeparatedByString:@" "];
+      self.fullName = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
+      NSArray *nameTokens = [self.fullName componentsSeparatedByString:@" "];
 
       self.firstName = [nameTokens objectAtIndex:0];
 
@@ -48,10 +57,45 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
           self.middleName = [[nameTokens subarrayWithRange:NSMakeRange(1, [nameTokens count] - 2)] componentsJoinedByString:@" "];
         }
       }
+
+      [self populateFromAddressBook];
     }
   }
 
   return self;
+}
+
+#pragma mark - Private methods
+
+- (void)populateFromAddressBook {
+  ABAddressBookRef addressBook = ABAddressBookCreate();
+  NSArray *people = (__bridge NSArray *)ABAddressBookCopyPeopleWithName(addressBook, (__bridge CFStringRef)self.fullName);
+
+  if ([people count] > 0) {
+    ABRecordRef owner = (__bridge ABRecordRef)[people objectAtIndex:0];
+
+    // Email
+    ABMultiValueRef emailMultiValue = ABRecordCopyValue(owner, kABPersonEmailProperty);
+    NSArray *emails = (__bridge NSArray *)ABMultiValueCopyArrayOfAllValues(emailMultiValue);
+
+    if ([emails count] > 0) {
+      self.email = (NSString *)[emails objectAtIndex:0];
+    }
+
+    CFRelease(emailMultiValue);
+
+    // Phone
+    ABMultiValueRef phoneMultiValue = ABRecordCopyValue(owner, kABPersonPhoneProperty);
+    NSArray *phones = (__bridge NSArray *)ABMultiValueCopyArrayOfAllValues(phoneMultiValue);
+
+    if ([phones count] > 0) {
+      self.phone = (NSString *)[phones objectAtIndex:0];
+    }
+
+    CFRelease(phoneMultiValue);
+  }
+
+  CFRelease(addressBook);
 }
 
 @end
