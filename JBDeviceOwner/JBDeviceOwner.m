@@ -12,10 +12,12 @@
 @interface JBDeviceOwner ()
 
 @property (weak, nonatomic) UIDevice *device;
+@property (strong, nonatomic, readwrite) NSString *email;
 @property (strong, nonatomic, readwrite) NSString *firstName;
 @property (strong, nonatomic, readwrite) NSString *fullName;
 @property (strong, nonatomic, readwrite) NSString *lastName;
 @property (strong, nonatomic, readwrite) NSString *middleName;
+@property (strong, nonatomic, readwrite) NSString *phone;
 
 - (void)populateFromAddressBook;
 
@@ -26,10 +28,12 @@
 static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
 @synthesize device;
+@synthesize email;
 @synthesize firstName;
 @synthesize fullName;
 @synthesize lastName;
 @synthesize middleName;
+@synthesize phone;
 
 #pragma mark - Creation/Removal Methods
 
@@ -65,8 +69,31 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
 - (void)populateFromAddressBook {
   ABAddressBookRef addressBook = ABAddressBookCreate();
+  NSArray *people = (__bridge NSArray *)ABAddressBookCopyPeopleWithName(addressBook, (__bridge CFStringRef)self.fullName);
 
+  if ([people count] > 0) {
+    ABRecordRef owner = (__bridge ABRecordRef)[people objectAtIndex:0];
 
+    // Email
+    ABMultiValueRef emailMultiValue = ABRecordCopyValue(owner, kABPersonEmailProperty);
+    NSArray *emails = (__bridge NSArray *)ABMultiValueCopyArrayOfAllValues(emailMultiValue);
+
+    if ([emails count] > 0) {
+      self.email = (NSString *)[emails objectAtIndex:0];
+    }
+
+    CFRelease(emailMultiValue);
+
+    // Phone
+    ABMultiValueRef phoneMultiValue = ABRecordCopyValue(owner, kABPersonPhoneProperty);
+    NSArray *phones = (__bridge NSArray *)ABMultiValueCopyArrayOfAllValues(phoneMultiValue);
+
+    if ([phones count] > 0) {
+      self.phone = (NSString *)[phones objectAtIndex:0];
+    }
+
+    CFRelease(phoneMultiValue);
+  }
 
   CFRelease(addressBook);
 }
