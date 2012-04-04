@@ -10,11 +10,10 @@
 
 @interface JBDeviceOwner ()
 
+@property (weak, nonatomic) UIDevice *device;
 @property (strong, nonatomic, readwrite) NSString *firstName;
 @property (strong, nonatomic, readwrite) NSString *lastName;
 @property (strong, nonatomic, readwrite) NSString *middleName;
-
-+ (NSString *)deviceName;
 
 @end
 
@@ -22,17 +21,19 @@
 
 static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
+@synthesize device;
 @synthesize firstName;
 @synthesize lastName;
 @synthesize middleName;
 
 #pragma mark - Creation/Removal Methods
 
-- (id)init {
+- (id)initWithDevice:(UIDevice *)device {
   self = [super init];
 
   if (nil != self) {
-    NSString *deviceName = [JBDeviceOwner deviceName];
+    self.device = device;
+    NSString *deviceName = self.device.name;
 
     if ([deviceName hasSuffix:kDeviceNameSuffix]) {
       NSString *name = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
@@ -51,12 +52,6 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
   }
 
   return self;
-}
-
-#pragma mark - Private methods
-
-+ (NSString *)deviceName {
-  return [UIDevice currentDevice].name;
 }
 
 @end
