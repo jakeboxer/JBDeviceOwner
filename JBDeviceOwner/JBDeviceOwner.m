@@ -44,22 +44,20 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
     self.device = aDevice;
     NSString *deviceName = self.device.name;
 
-    if ([deviceName hasSuffix:kDeviceNameSuffix]) {
-      self.fullName = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
-      NSArray *nameTokens = [self.fullName componentsSeparatedByString:@" "];
+    self.fullName = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
+    NSArray *nameTokens = [self.fullName componentsSeparatedByString:@" "];
 
-      self.firstName = [nameTokens objectAtIndex:0];
+    self.firstName = [nameTokens objectAtIndex:0];
 
-      if ([nameTokens count] > 1) {
-        self.lastName = [nameTokens lastObject];
+    if ([nameTokens count] > 1) {
+      self.lastName = [nameTokens lastObject];
 
-        if ([nameTokens count] > 2) {
-          self.middleName = [[nameTokens subarrayWithRange:NSMakeRange(1, [nameTokens count] - 2)] componentsJoinedByString:@" "];
-        }
+      if ([nameTokens count] > 2) {
+        self.middleName = [[nameTokens subarrayWithRange:NSMakeRange(1, [nameTokens count] - 2)] componentsJoinedByString:@" "];
       }
-
-      [self populateFromAddressBook];
     }
+
+    [self populateFromAddressBook];
   }
 
   return self;
