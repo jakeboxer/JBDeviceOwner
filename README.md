@@ -2,9 +2,9 @@
 
 Typing names, email addresses, and other personal info is never fun. This is often your user's first experience with your app, and it sucks.
 
-Fortunately, these data often already exist somewhere on your user's phone. `JBDeviceOwner` presents them to you in a simple interface.
+Fortunately, these data often already exist somewhere on your user's phone. `JBDeviceOwner` presents them to iOS app developers with a simple interface.
 
-`JBDeviceOwner` currently gets you the following attributes:
+`JBDeviceOwner` can currently get you the following attributes of the device's owner:
 
 - Name
 - Email address
