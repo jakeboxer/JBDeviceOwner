@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 Jake Boxer. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ExampleViewController.h"
 #import <JBDeviceOwner/JBDeviceOwner.h>
 
-@implementation ViewController
+@implementation ExampleViewController
 
 @synthesize firstNameTextField;
 @synthesize lastNameTextField;

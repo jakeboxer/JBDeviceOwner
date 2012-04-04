@@ -14,7 +14,7 @@
 		230BAE48152BE54700CE26EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAE47152BE54700CE26EC /* main.m */; };
 		230BAE4C152BE54700CE26EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAE4B152BE54700CE26EC /* AppDelegate.m */; };
 		230BAE4F152BE54700CE26EC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230BAE4D152BE54700CE26EC /* MainStoryboard.storyboard */; };
-		230BAE52152BE54700CE26EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAE51152BE54700CE26EC /* ViewController.m */; };
+		230BAE52152BE54700CE26EC /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAE51152BE54700CE26EC /* ExampleViewController.m */; };
 		230BAE59152BE56E00CE26EC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAE58152BE56E00CE26EC /* AddressBook.framework */; };
 		230BAE64152BE68800CE26EC /* JBDeviceOwner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAE63152BE68800CE26EC /* JBDeviceOwner.framework */; };
 /* End PBXBuildFile section */
@@ -31,8 +31,8 @@
 		230BAE4A152BE54700CE26EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		230BAE4B152BE54700CE26EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		230BAE4E152BE54700CE26EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		230BAE50152BE54700CE26EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		230BAE51152BE54700CE26EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		230BAE50152BE54700CE26EC /* ExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExampleViewController.h; sourceTree = "<group>"; };
+		230BAE51152BE54700CE26EC /* ExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleViewController.m; sourceTree = "<group>"; };
 		230BAE58152BE56E00CE26EC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		230BAE63152BE68800CE26EC /* JBDeviceOwner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JBDeviceOwner.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +88,8 @@
 				230BAE4A152BE54700CE26EC /* AppDelegate.h */,
 				230BAE4B152BE54700CE26EC /* AppDelegate.m */,
 				230BAE4D152BE54700CE26EC /* MainStoryboard.storyboard */,
-				230BAE50152BE54700CE26EC /* ViewController.h */,
-				230BAE51152BE54700CE26EC /* ViewController.m */,
+				230BAE50152BE54700CE26EC /* ExampleViewController.h */,
+				230BAE51152BE54700CE26EC /* ExampleViewController.m */,
 				230BAE42152BE54700CE26EC /* Supporting Files */,
 			);
 			path = JBDeviceOwnerExample;
@@ -171,7 +171,7 @@
 			files = (
 				230BAE48152BE54700CE26EC /* main.m in Sources */,
 				230BAE4C152BE54700CE26EC /* AppDelegate.m in Sources */,
-				230BAE52152BE54700CE26EC /* ViewController.m in Sources */,
+				230BAE52152BE54700CE26EC /* ExampleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
