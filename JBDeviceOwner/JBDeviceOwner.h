@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <JBDeviceOwner/UIDevice+JBDeviceOwner.h>
+#import "UIDevice+JBDeviceOwner.h"
 
 @interface JBDeviceOwner : NSObject
 

@@ -24,7 +24,7 @@
 /* Begin PBXBuildFile section */
 		230BAD87152BBBE400CE26EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAD86152BBBE400CE26EC /* Foundation.framework */; };
 		230BAD8D152BBBE400CE26EC /* JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD8C152BBBE400CE26EC /* JBDeviceOwner.m */; };
-		230BAD95152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */; };
+		230BAD95152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 230BAD93152BBC6500CE26EC /* UIDevice+JBDeviceOwner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		230BAD96152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAD94152BBC6500CE26EC /* UIDevice+JBDeviceOwner.m */; };
 		230BAD98152BBDB300CE26EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAD97152BBDB300CE26EC /* UIKit.framework */; };
 		230BAD99152BBE3200CE26EC /* JBDeviceOwner.h in Headers */ = {isa = PBXBuildFile; fileRef = 230BAD8B152BBBE400CE26EC /* JBDeviceOwner.h */; settings = {ATTRIBUTES = (Public, ); }; };
