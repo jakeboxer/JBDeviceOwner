@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>JBDeviceOwner by jakeboxer</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>JBDeviceOwner</h1>
+<p>Auto-fill iOS registration forms with the device owner's name, email, and other data</p>
+        <p class="view"><a href="https://github.com/jakeboxer/JBDeviceOwner">View the Project on GitHub <small>jakeboxer/JBDeviceOwner</small></a></p>
+        <ul>
+          <li><a href="https://github.com/jakeboxer/JBDeviceOwner/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/jakeboxer/JBDeviceOwner/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/jakeboxer/JBDeviceOwner">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Typing names, email addresses, and other personal info is never fun. This is often your user's first experience with your app, and it sucks.</p>
+
+<p>Fortunately, these data often already exist somewhere on your user's phone. <code>JBDeviceOwner</code> presents them to iOS app developers with a simple interface.</p>
+
+<p><code>JBDeviceOwner</code> can currently get you the following attributes of the device's owner:</p>
+
+<ul>
+<li>Name</li>
+<li>Email address</li>
+<li>Phone number</li>
+</ul><p>More are coming.</p>
+
+<h2>API</h2>
+
+<div class="highlight">
+<pre><span class="n">JBDeviceOwner</span> <span class="o">*</span><span class="n">owner</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIDevice</span> <span class="n">currentDevice</span><span class="p">].</span><span class="n">owner</span><span class="p">;</span>
+
+<span class="c1">// owner will be nil if the user's data could not be found.</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">owner</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">firstNameTextField</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">owner</span><span class="p">.</span><span class="n">firstName</span><span class="p">;</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">lastNameTextField</span><span class="p">.</span><span class="n">text</span>  <span class="o">=</span> <span class="n">owner</span><span class="p">.</span><span class="n">lastName</span><span class="p">;</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">emailTextField</span><span class="p">.</span><span class="n">text</span>     <span class="o">=</span> <span class="n">owner</span><span class="p">.</span><span class="n">email</span><span class="p">;</span>
+  <span class="n">self</span><span class="p">.</span><span class="n">phoneTextField</span><span class="p">.</span><span class="n">text</span>     <span class="o">=</span> <span class="n">owner</span><span class="p">.</span><span class="n">phone</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+
+<h2>How does it work?</h2>
+
+<p>It's really simple actually.</p>
+
+<p>Most iPhones are named "Jake Boxer's iPhone" (sometimes with a different person's name instead of mine). Most iPhones have their owner saved in their address book.</p>
+
+<p><code>JBDeviceOwner</code> extracts the owner's name from the device name, finds the matching record in the address book, and populates the <code>JBDeviceOwner</code> instance with the data from the record.</p>
+
+<p>If <code>JBDeviceOwner</code> can't figure out the owner's name, or if it can't find a matching record in the address book, it won't return anything.</p>
+
+<h2>How to install</h2>
+
+<ol>
+<li>Download <a href="https://github.com/downloads/jakeboxer/JBDeviceOwner/JBDeviceOwner.framework.zip">the latest framework ZIP</a> from <a href="https://github.com/jakeboxer/JBDeviceOwner/downloads">the Downloads tab</a>. Unzip/untar it.</li>
+<li>Drag <code>JBDeviceOwner.framework</code> into your project.</li>
+<li>Add <code>AddressBook.framework</code> to your project if it's not there already (it's an Apple framework).</li>
+<li>Add <code>-ObjC</code> to your target's "Other Linker Flags".</li>
+<li>Add <code>#import &lt;JBDeviceOwner/JBDeviceOwner.h&gt;</code> to any file where you want to use <code>JBDeviceOwner</code>.</li>
+<li>Delight your users!</li>
+</ol><h2>Requirements</h2>
+
+<ul>
+<li>iOS 5.0</li>
+</ul><h2>Thanks</h2>
+
+<p>This library was inspired by <a href="https://squareup.com/">Square</a>'s iOS app, and by <a href="http://www.quora.com/Square-company/How-does-Square-know-my-name-in-their-apps-registration-process">John Feminella's awesome Quora explanation</a> of Square's magic. Fantastic idea, super clear breakdown.</p>
+
+<p>Big thanks to <a href="http://twitter.com/featherless">Jeff Verkoeyen</a> for his <a href="https://github.com/jverkoey/iOS-Framework">iOS-Framework</a> guide. For some reason, creating static iOS frameworks is a giant hassle. Jeff made it super easy. Also, this might be the only Xcode tutorial I've ever followed where everything worked as expected.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/jakeboxer">jakeboxer</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+  </body>
+</html>
