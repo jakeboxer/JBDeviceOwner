@@ -15,6 +15,7 @@
 		230BAE4C152BE54700CE26EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAE4B152BE54700CE26EC /* AppDelegate.m */; };
 		230BAE4F152BE54700CE26EC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230BAE4D152BE54700CE26EC /* MainStoryboard.storyboard */; };
 		230BAE52152BE54700CE26EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 230BAE51152BE54700CE26EC /* ViewController.m */; };
+		230BAE59152BE56E00CE26EC /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 230BAE58152BE56E00CE26EC /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		230BAE4E152BE54700CE26EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		230BAE50152BE54700CE26EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		230BAE51152BE54700CE26EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		230BAE58152BE56E00CE26EC /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230BAE59152BE56E00CE26EC /* AddressBook.framework in Frameworks */,
 				230BAE3C152BE54700CE26EC /* UIKit.framework in Frameworks */,
 				230BAE3E152BE54700CE26EC /* Foundation.framework in Frameworks */,
 				230BAE40152BE54700CE26EC /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +70,7 @@
 		230BAE3A152BE54700CE26EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				230BAE58152BE56E00CE26EC /* AddressBook.framework */,
 				230BAE3B152BE54700CE26EC /* UIKit.framework */,
 				230BAE3D152BE54700CE26EC /* Foundation.framework */,
 				230BAE3F152BE54700CE26EC /* CoreGraphics.framework */,
