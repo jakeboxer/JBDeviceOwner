@@ -26,8 +26,6 @@
 
 @implementation JBDeviceOwner
 
-static NSString * const kDeviceNameSuffix = @"'s iPhone";
-
 @synthesize device;
 @synthesize email;
 @synthesize firstName;
@@ -44,9 +42,21 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
   if (nil != self) {
     self.device = aDevice;
-    NSString *deviceName = self.device.name;
+    NSMutableString *deviceName = [NSMutableString stringWithString:self.device.name];
 
-    self.fullName = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
+    NSArray *stringsToStrip = [NSArray arrayWithObjects:@"'s",
+                                                        @"ipad",
+                                                        @"iphone"
+                                                        @"ipod touch", nil];
+
+    for (NSString *stringToStrip in stringsToStrip) {
+      [deviceName replaceOccurrencesOfString:stringToStrip
+                                  withString:@""
+                                     options:NSCaseInsensitiveSearch
+                                       range:NSMakeRange(0, [deviceName length])];
+    }
+
+    self.fullName = [deviceName stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSArray *nameTokens = [self.fullName componentsSeparatedByString:@" "];
 
     self.firstName = [nameTokens objectAtIndex:0];
