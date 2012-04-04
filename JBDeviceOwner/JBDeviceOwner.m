@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) UIDevice *device;
 @property (strong, nonatomic, readwrite) NSString *firstName;
+@property (strong, nonatomic, readwrite) NSString *fullName;
 @property (strong, nonatomic, readwrite) NSString *lastName;
 @property (strong, nonatomic, readwrite) NSString *middleName;
 
@@ -23,6 +24,7 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
 @synthesize device;
 @synthesize firstName;
+@synthesize fullName;
 @synthesize lastName;
 @synthesize middleName;
 
@@ -36,8 +38,8 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
     NSString *deviceName = self.device.name;
 
     if ([deviceName hasSuffix:kDeviceNameSuffix]) {
-      NSString *name = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
-      NSArray *nameTokens = [name componentsSeparatedByString:@" "];
+      self.fullName = [deviceName stringByReplacingOccurrencesOfString:kDeviceNameSuffix withString:@""];
+      NSArray *nameTokens = [self.fullName componentsSeparatedByString:@" "];
 
       self.firstName = [nameTokens objectAtIndex:0];
 
