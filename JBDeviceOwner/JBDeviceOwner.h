@@ -11,7 +11,7 @@
 
 @interface JBDeviceOwner : NSObject
 
-- (id)initWithDevice:(UIDevice *)device;
+- (id)initWithDevice:(UIDevice *)aDevice;
 
 @property (strong, nonatomic, readonly) NSString *firstName;
 @property (strong, nonatomic, readonly) NSString *lastName;

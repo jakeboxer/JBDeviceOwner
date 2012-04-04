@@ -28,11 +28,11 @@ static NSString * const kDeviceNameSuffix = @"'s iPhone";
 
 #pragma mark - Creation/Removal Methods
 
-- (id)initWithDevice:(UIDevice *)device {
+- (id)initWithDevice:(UIDevice *)aDevice {
   self = [super init];
 
   if (nil != self) {
-    self.device = device;
+    self.device = aDevice;
     NSString *deviceName = self.device.name;
 
     if ([deviceName hasSuffix:kDeviceNameSuffix]) {
