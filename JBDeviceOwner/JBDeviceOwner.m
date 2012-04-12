@@ -46,7 +46,7 @@
 
     NSArray *stringsToStrip = [NSArray arrayWithObjects:@"'s",
                                                         @"ipad",
-                                                        @"iphone"
+                                                        @"iphone",
                                                         @"ipod touch", nil];
 
     for (NSString *stringToStrip in stringsToStrip) {
