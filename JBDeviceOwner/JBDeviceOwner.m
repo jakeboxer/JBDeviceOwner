@@ -44,7 +44,8 @@
     self.device = aDevice;
     NSMutableString *deviceName = [NSMutableString stringWithString:self.device.name];
 
-    NSArray *stringsToStrip = [NSArray arrayWithObjects:@"'s",
+    NSArray *stringsToStrip = [NSArray arrayWithObjects:@"’s",
+                                                        @"'s",
                                                         @"ipad",
                                                         @"iphone",
                                                         @"ipod touch", nil];
