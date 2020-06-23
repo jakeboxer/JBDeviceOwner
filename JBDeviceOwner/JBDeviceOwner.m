@@ -107,7 +107,9 @@
     CFRelease(phoneMultiValue);
   }
 
-  CFRelease(addressBook);
+  if( addressBook != nil ){
+    CFRelease(addressBook);
+  }
 }
 
 @end
